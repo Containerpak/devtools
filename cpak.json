@@ -1,22 +1,16 @@
 {
-  "name": "Visual Studio Code",
-  "description": "Code editing. Redefined.",
+  "name": "Devtools",
+  "description": "Common development utilities.",
   "version": "1.82.2",
-  "image": "ghcr.io/containerpak/vscode:main",
+  "image": "ghcr.io/containerpak/devtools:main",
   "binaries": [
-    "/usr/share/code/bin/code"
+    "/usr/bin/git"
   ],
-  "desktop_entries": [
-    "/usr/share/applications/code.desktop",
-    "/usr/share/applications/code-url-handler.desktop"
-  ],
+  "desktop_entries": [],
   "dependencies": [
     "github.com/containerpak/devtools"
   ],
-  "future_dependencies": [
-    "github.com/containerpak/sdk-go",
-    "github.com/containerpak/sdk-python"
-  ],
+  "future_dependencies": [],
   "idle_time": 0,
   "override": {
     "socketX11": true,
