@@ -1,9 +1,5 @@
-FROM ghcr.io/containerpak/mesa:main
+FROM ghcr.io/containerpak/base:main
 ARG DEBIAN_FRONTEND=noninteractive
 RUN apt update && \
-    apt install -y wget git gpg && \
-    wget -O code.deb https://packages.microsoft.com/repos/code/pool/main/c/code/code_1.82.2-1694671812_amd64.deb && \
-    dpkg -i code.deb || true && \
-    apt install -f -y && \
-    rm -f code.deb && \
+    apt install -y git && \
     /usr/bin/cpak-clean-junk
