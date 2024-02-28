@@ -7,10 +7,8 @@
     "/usr/bin/git"
   ],
   "desktop_entries": [],
-  "dependencies": [
-    "github.com/containerpak/devtools"
-  ],
-  "future_dependencies": [],
+  "dependencies": [],
+  "addons": [],
   "idle_time": 0,
   "override": {
     "socketX11": true,
