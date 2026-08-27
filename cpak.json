@@ -1,8 +1,10 @@
 {
+  "$schema": "https://raw.githubusercontent.com/Containerpak/cpak/v2/schema/manifest-v3.json",
+  "manifest_version": "3.0",
   "name": "Devtools",
   "description": "Common development utilities.",
   "version": "1.82.2",
-  "image": "ghcr.io/containerpak/devtools:main",
+  "image": "ghcr.io/containerpak/devtools@sha256:fe859aa86799bea7a6b8d581e03af0f2ecf979984ca4eeeb8435afc60fb5a213",
   "binaries": [
     "/usr/bin/git"
   ],
@@ -11,11 +13,8 @@
   "addons": [],
   "idle_time": 0,
   "override": {
-    "socketX11": true,
     "socketWayland": true,
     "socketPulseAudio": true,
-    "socketSessionBus": true,
-    "socketSystemBus": true,
     "socketSshAgent": true,
     "socketCups": false,
     "socketGpgAgent": true,
@@ -23,13 +22,19 @@
     "deviceKvm": false,
     "deviceShm": false,
     "deviceAll": true,
-    "fsHost": true,
-    "fsHostEtc": false,
-    "fsHostHome": true,
-    "fsExtra": [],
     "env": [],
     "network": true,
     "process": true,
-    "asRoot": false
+    "asRoot": false,
+    "filesystem": [
+      {
+        "path": "host",
+        "access": "read-only"
+      },
+      {
+        "path": "home",
+        "access": "read-write"
+      }
+    ]
   }
 }
