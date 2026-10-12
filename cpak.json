@@ -4,7 +4,7 @@
   "name": "Devtools",
   "description": "Common development utilities.",
   "version": "1.82.2",
-  "image": "ghcr.io/containerpak/devtools@sha256:9f01bf0a0691c7e052cc0b619528efa0980c8c7b1cbdcf4dd0f7b76a46be5f05",
+  "image": "ghcr.io/containerpak/devtools@sha256:fb99ecadfdd5625059920889f8b19cb22e2c3b35f2db14c858e4e20b28d98a90",
   "binaries": [
     "/usr/bin/git"
   ],
